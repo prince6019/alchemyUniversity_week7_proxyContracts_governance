@@ -1,7 +1,7 @@
 const { ethers, upgrades } = require("hardhat");
 
 // TO DO: Place the address of your proxy here!
-const proxyAddress = "0xaD442Ea23fcf55594a6af4A5e65f8A61A207ab22";
+const proxyAddress = "0x210c6bd50361470c1C66CC46f52C0d368F158126";
 
 async function main() {
   const VendingMachineV2 = await ethers.getContractFactory("VendingMachineV2");
@@ -11,7 +11,7 @@ async function main() {
     proxyAddress
   );
 
-  // console.log("The current contract owner is: " + upgraded.owner().address);
+  console.log("The current contract owner is: " + upgraded.owner());
   console.log("Implementation contract address: " + implementationAddress);
 }
 
